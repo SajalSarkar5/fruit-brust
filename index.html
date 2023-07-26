@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruit Brust</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <!-- tailwind & daisyui link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- google font -->
@@ -15,84 +17,88 @@
         rel="stylesheet">
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/ae15632d16.js" crossorigin="anonymous"></script>
-
-    <!-- <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                'text-color': '#FFF',
-              }
-            }
-          }
-        }
-      </script> -->
-
-
+    <!-- style section -->
     <style>
         .font-lato {
             font-family: 'Lato', sans-serif;
         }
     </style>
 </head>
+<!-- body section -->
 
 <body class="font-lato">
+    <!-- header section start -->
     <header class="lg:container mx-auto px-5">
         <section>
-            <!-- <nav>
-                <div class="navbar lg:bg-[#F85559] rounded-full py-5 px-5 lg:px-[50px] ">
-                    <div class="navbar flex-row-reverse lg:flex-row">
-                        <div class="navbar-start w-[40%] justify-end lg:justify-start">
-                            <div class="dropdown">
+            <!-- navbar section start -->
+            <nav class=" lg:bg-[#F85559] rounded-full py-4 lg:px-[50px] px-4">
+                <div class="navbar flex-row-reverse lg:flex-row ">
+                    <div class="navbar-start  w-[40%] justify-end lg:justify-start">
+                        <div class="dropdown">
+                            <div>
                                 <label tabindex="0" class="btn btn-ghost lg:hidden">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M4 6h16M4 12h8m-8 6h16" />
                                     </svg>
                                 </label>
-                                <ul tabindex="0"
-                                    class="menu menu-sm bg-slate-300 dropdown-content mt-3 z-[1] p-2 rounded-box w-52">
-                                    <li><a>Home</a></li>
-                                    <li><a>About Us</a></li>
-                                    <li><a>Shop</a></li>
-                                    <li><a>All Fruits</a></li>
-                                    <div class="bg-slate-300">
-                                        <input class="py-[18px] relative w-40 rounded-[50px] px-5" type="search" name=""
-                                            value="Search here" id="">
-                                        <i class="fa-solid fa-magnifying-glass absolute mr-8"></i>
-                                    </div>
-                                </ul>
                             </div>
-                            <div class="flex items-center">
-                                <ul tabindex="0"
-                                    class="menu menu-sm dropdown-content mt-3 z-[1] p-2 hidden lg:flex rounded-box w-52">
-                                    <div class="flex justify-center items-center text-[#FFF] font-semibold text-[18px]">
-                                        <li><a>Home</a></li>
-                                        <li><a>About Us</a></li>
-                                        <li><a>Shop</a></li>
-                                        <li><a>All Fruits</a></li>
-                                    </div>
-                                </ul>
-                            </div>
+                            <ul tabindex="0"
+                                class="menu menu-sm dropdown-content  z-[1] p-2 shadow bg-base-100 rounded-box w-52 ml-[-157px] mt-6 bg-slate-200">
+                                <li>
+                                    <a>Home</a>
+                                </li>
+                                <li>
+                                    <a>About Us</a>
+                                </li>
+                                <li>
+                                    <a>Shop</a>
+                                </li>
+                                <li>
+                                    <a>All Fruits</a>
+                                </li>
+                                <li> <input class=" rounded-full bg-white py-[18px] pl-7 2xl:pr-[287px] relative "
+                                        type="text" name="" id="" placeholder="Search here"> <i
+                                        class="fa-solid fa-magnifying-glass absolute text-xl top-[12px] right-[14px] "></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="navbar-center hidden lg:flex">
+                            <ul class="menu menu-horizontal px-1">
+                                <li>
+                                    <a class="text-white text-lg font-medium">Home</a>
+                                </li>
+                                <li>
+                                    <a class="text-white text-lg font-medium">About Us</a>
+                                </li>
+                                <li>
+                                    <a class="text-white text-lg font-medium">Shop</a>
+                                </li>
+                                <li>
+                                    <a class="text-white text-lg font-medium">All Fruits</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="navbar-center lg:flex">
-                        <a class=" normal-case text-xl">
-                            <div class="flex gap-4 items-center">
-                                <img class="w-12" src="images/logo.png" alt="">
-                                <h2 class="text-[#FFF] text-4xl font-bold">Fruit Burst</h2>
+                    <div class=" w-[60%] flex items-center justify-between">
+                        <!-- navbar-logo -->
+                        <div class="">
+                            <div class="flex items-center">
+                                <img class="w-[28px] lg:w-[50px]" src="images/logo.png" alt="">
+                                &nbsp;<span class="font-bold lg:text-white lg:text-5xl  text-xl">Fruit Burst</span>
                             </div>
-                        </a>
-                    </div>
-                    <div class="navbar-end hidden lg:flex">
-                        <input class="py-[16px] relative w-80 rounded-[50px] px-5" type="search" name=""
-                            value="Search here" id="">
-                        <i class="fa-solid fa-magnifying-glass absolute mr-3"></i>
-
+                        </div>
+                        <div class="hidden lg:block relative">
+                            <input class=" rounded-full bg-white py-[18px] pl-7 2xl:pr-[287px] " type="text" name=""
+                                id="" placeholder="Search here">
+                            <i
+                                class="fa-solid fa-magnifying-glass absolute text-xl top-[16px] right-[17px] bottom-0 "></i>
+                        </div>
                     </div>
                 </div>
-            </nav> -->
+            </nav>
+            <!-- navbar section end -->
 
             <div class="mt-14">
                 <div class="carousel relative w-full">
@@ -188,7 +194,7 @@
                     </div>
                 </div>
 
-                <div class="absolute hidden lg:block  bottom-16 left-[19%]">
+                <div class="absolute hidden lg:block -bottom-9 left-[19%]">
                     <div
                         class="flex gap-24 justify-center items-center w-[1196px] mx-auto rounded-lg text-center bg-[#FFF] shadow-lg shadow-gray-300 py-10 px-[70px]">
                         <div>
@@ -218,6 +224,8 @@
 
         </section>
     </header>
+    <!-- header section end -->
+
     <main class="lg:container mx-auto px-5">
         <article>
             <section class="mt-6 lg:mt-32 lg:mt-56 mb-32">
@@ -264,7 +272,45 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                                <h6 class="font-lato text-[#F85559] text-lg font-bold">Details</h6>
+
+                                <div>
+                                    <!-- Open the modal using ID.showModal() method -->
+                                    <button class="" onclick="my_modal_1.showModal()">
+                                        <h6 class="font-lato text-[#F85559] text-lg font-bold">Details</h6>
+                                    </button>
+                                    <dialog id="my_modal_1" class="modal">
+                                        <form method="dialog" class="modal-box">
+
+                                            <div class="card bg-base-100">
+                                                <figure class="px-10 pt-10">
+                                                    <img src="images/fruit6.png" alt="Shoes" class="" />
+                                                </figure>
+                                                <div class="card-body flex justify-center items-center text-center">
+                                                    <p class="text-[#12121299] text-2xl font-medium">Apples</p>
+                                                    <div class="text-[#FBC0A8] text-2xl">
+                                                        <i class="fa-solid fa-star text-[#F85559]"></i>
+                                                        <i class="fa-regular fa-star-half-stroke text-[#F85559]"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                    <div class="card-actions">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-action flex justify-between items-center">
+                                                <!-- if there is a button in form, it will close the modal -->
+                                                <button class="btn bg-white border-[#F85559]">Close</button>
+                                                <button
+                                                    class="btn bg-[#F85559] border-none text-base text-[#FFF] font-semibold">Shop
+                                                    Now</button>
+                                            </div>
+                                        </form>
+                                    </dialog>
+                                </div>
+
                             </div>
                         </div>
                         <div class="card bg-white hover:bg-gray-300 border">
@@ -273,7 +319,7 @@
                             </figure>
                             <div class="card-body items-center text-center space-y-6">
                                 <h2 class="card-title font-lato text-[#121212] text-2xl font-bold ">12.90$ - 18.85$</h2>
-                                <p class="text-[#12121299] text-base font-medium">Apples</p>
+                                <p class="text-[#12121299] text-base font-medium">Orange</p>
                                 <div class="text-[#FBC0A8] text-2xl">
                                     <i class="fa-solid fa-star text-[#F85559]"></i>
                                     <i class="fa-regular fa-star-half-stroke text-[#F85559]"></i>
@@ -281,7 +327,46 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                                <h6 class="font-lato text-[#F85559] text-lg font-bold">Details</h6>
+
+                                <div>
+                                    <!-- Open the modal using ID.showModal() method -->
+                                    <button class="" onclick="my_modal_2.showModal()">
+                                        <h6 class="font-lato text-[#F85559] text-lg font-bold">Details</h6>
+                                    </button>
+                                    <dialog id="my_modal_2" class="modal">
+                                        <form method="dialog" class="modal-box">
+
+                                            <div class="card bg-base-100">
+                                                <figure class="px-10 pt-10">
+                                                    <img src="images/fruit7.png" alt="Shoes" class="" />
+                                                </figure>
+                                                <div class="card-body flex justify-center items-center text-center">
+                                                    <p class="text-[#12121299] text-2xl font-medium">Orange</p>
+                                                    <div class="text-[#FBC0A8] text-2xl">
+                                                        <i class="fa-solid fa-star text-[#F85559]"></i>
+                                                        <i class="fa-regular fa-star-half-stroke text-[#F85559]"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                    <div class="card-actions">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-action flex justify-between items-center">
+                                                <!-- if there is a button in form, it will close the modal -->
+                                                <button class="btn bg-white border-[#F85559]">Close</button>
+                                                <button
+                                                    class="btn bg-[#F85559] border-none text-base text-[#FFF] font-semibold">Shop
+                                                    Now</button>
+                                            </div>
+                                        </form>
+                                    </dialog>
+                                </div>
+
+
                             </div>
                         </div>
                         <div class="card bg-white hover:bg-gray-300 border">
@@ -290,7 +375,7 @@
                             </figure>
                             <div class="card-body items-center text-center space-y-6">
                                 <h2 class="card-title font-lato text-[#121212] text-2xl font-bold ">12.90$ - 18.85$</h2>
-                                <p class="text-[#12121299] text-base font-medium">Apples</p>
+                                <p class="text-[#12121299] text-base font-medium">Red Dragon</p>
                                 <div class="text-[#FBC0A8] text-2xl">
                                     <i class="fa-solid fa-star text-[#F85559]"></i>
                                     <i class="fa-regular fa-star-half-stroke text-[#F85559]"></i>
@@ -298,7 +383,46 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                                <h6 class="font-lato text-[#F85559] text-lg font-bold">Details</h6>
+
+                                <div>
+                                    <!-- Open the modal using ID.showModal() method -->
+                                    <button class="" onclick="my_modal_3.showModal()">
+                                        <h6 class="font-lato text-[#F85559] text-lg font-bold">Details</h6>
+                                    </button>
+                                    <dialog id="my_modal_3" class="modal">
+                                        <form method="dialog" class="modal-box">
+
+                                            <div class="card bg-base-100">
+                                                <figure class="px-10 pt-10">
+                                                    <img src="images/fruit8.png" alt="Shoes" class="" />
+                                                </figure>
+                                                <div class="card-body flex justify-center items-center text-center">
+                                                    <p class="text-[#12121299] text-2xl font-medium">Red Dragon</p>
+                                                    <div class="text-[#FBC0A8] text-2xl">
+                                                        <i class="fa-solid fa-star text-[#F85559]"></i>
+                                                        <i class="fa-regular fa-star-half-stroke text-[#F85559]"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                    <div class="card-actions">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-action flex justify-between items-center">
+                                                <!-- if there is a button in form, it will close the modal -->
+                                                <button class="btn bg-white border-[#F85559]">Close</button>
+                                                <button
+                                                    class="btn bg-[#F85559] border-none text-base text-[#FFF] font-semibold">Shop
+                                                    Now</button>
+                                            </div>
+                                        </form>
+                                    </dialog>
+                                </div>
+
+
                             </div>
                         </div>
                         <div class="card bg-white hover:bg-gray-300 border">
@@ -307,7 +431,7 @@
                             </figure>
                             <div class="card-body items-center text-center space-y-6">
                                 <h2 class="card-title font-lato text-[#121212] text-2xl font-bold ">12.90$ - 18.85$</h2>
-                                <p class="text-[#12121299] text-base font-medium">Apples</p>
+                                <p class="text-[#12121299] text-base font-medium">Banana</p>
                                 <div class="text-[#FBC0A8] text-2xl">
                                     <i class="fa-solid fa-star text-[#F85559]"></i>
                                     <i class="fa-regular fa-star-half-stroke text-[#F85559]"></i>
@@ -315,7 +439,47 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                                <h6 class="font-lato text-[#F85559] text-lg font-bold">Details</h6>
+
+
+                                <div>
+                                    <!-- Open the modal using ID.showModal() method -->
+                                    <button class="" onclick="my_modal_4.showModal()">
+                                        <h6 class="font-lato text-[#F85559] text-lg font-bold">Details</h6>
+                                    </button>
+                                    <dialog id="my_modal_4" class="modal">
+                                        <form method="dialog" class="modal-box">
+
+                                            <div class="card bg-base-100">
+                                                <figure class="px-10 pt-10">
+                                                    <img src="images/fruit9.png" alt="Shoes" class="" />
+                                                </figure>
+                                                <div class="card-body flex justify-center items-center text-center">
+                                                    <p class="text-[#12121299] text-2xl font-medium">Banana</p>
+                                                    <div class="text-[#FBC0A8] text-2xl">
+                                                        <i class="fa-solid fa-star text-[#F85559]"></i>
+                                                        <i class="fa-regular fa-star-half-stroke text-[#F85559]"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                        <i class="fa-solid fa-star"></i>
+                                                    </div>
+                                                    <div class="card-actions">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="modal-action flex justify-between items-center">
+                                                <!-- if there is a button in form, it will close the modal -->
+                                                <button class="btn bg-white border-[#F85559]">Close</button>
+                                                <button
+                                                    class="btn bg-[#F85559] border-none text-base text-[#FFF] font-semibold">Shop
+                                                    Now</button>
+                                            </div>
+                                        </form>
+                                    </dialog>
+                                </div>
+
+
                             </div>
                         </div>
                     </div>
@@ -334,7 +498,8 @@
                             random text. It has roots in a piece of classical <br> Latin literature from 45 BC, making
                             it over 2000 years old.</p>
                     </div>
-                    <div class="flex gap-6 lg:gap-36 flex-col md:flex-col lg:flex-row justify-center items-center mt-12 ">
+                    <div
+                        class="flex gap-6 lg:gap-36 flex-col md:flex-col lg:flex-row justify-center items-center mt-12 ">
                         <div class="space-y-6">
                             <img src="images/member1.png" alt="">
                             <h6 class="font-lato text-[#FFF] text-2xl font-bold">Awlad Hossain</h6>
@@ -583,12 +748,117 @@
                 </div>
             </section>
 
-            <section>
-                
+            <section class="my-36">
+                <div class="text-center space-y-6">
+                    <h3 class="font-lato text-[#121212] text-5xl font-extrabold">Why Choose Us</h3>
+                    <p class="font-lato text-base font-medium text-[#12121299]">Contrary to popular belief, is not
+                        simply random text. It has roots in a piece of classical <br> Latin
+                        literature from 45 BC, making it over 2000 years old.</p>
+                </div>
+                <div class="flex gap-12 flex-col-reverse lg:flex-row justify-between items-center mt-12">
+                    <div>
+                        <div class="flex gap-6 justify-center items-center mb-9">
+                            <img class="bg-gray-300 rounded-full p-5 text-center" src="images/group 1.svg" alt="">
+                            <div class="space-y-4">
+                                <h4 class="font-lato text-2xl font-extrabold text-[#121212]">Dedicated Team</h4>
+                                <hr>
+                                <p class="font-lato text-[#12121299] text-base font-medium">Professional employees are
+                                    there for you to pick the most amazing and fresh
+                                    fruits.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 justify-center items-center mb-9">
+                            <img class="bg-gray-300 rounded-full p-5" src="images/love 1.svg" alt="">
+                            <div class="space-y-4">
+                                <h4 class="font-lato text-2xl font-extrabold text-[#121212]">Fresh is Best</h4>
+                                <hr>
+                                <p class="font-lato text-[#12121299] text-base font-medium">Professional employees are
+                                    there for you to pick the most amazing and fresh
+                                    fruits.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 justify-center items-center mb-9">
+                            <img class="bg-gray-300 rounded-full p-5" src="images/gift-box 1.svg" alt="">
+                            <div class="space-y-4">
+                                <h4 class="font-lato text-2xl font-extrabold text-[#121212]">Gift Certificates</h4>
+                                <hr>
+                                <p class="font-lato text-[#12121299] text-base font-medium">Professional employees are
+                                    there for you to pick the most amazing and fresh
+                                    fruits.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img class="w-full" src="images/whychoose1.png" alt="">
+                    </div>
+                    <div>
+                        <div class="flex gap-6 flex-row-reverse text-end justify-center items-center mb-9">
+                            <img class="bg-gray-300 rounded-full p-5" src="images/fruit 1.svg" alt="">
+                            <div class="space-y-4">
+                                <h4 class="font-lato text-2xl font-extrabold text-[#121212]">Integrated Supplier
+                                </h4>
+                                <hr>
+                                <p class="font-lato text-[#12121299] text-base font-medium">Professional employees
+                                    are there for you to pick the most amazing and fresh
+                                    fruits.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 flex-row-reverse text-end justify-center items-center mb-9">
+                            <img class="bg-gray-300 rounded-full p-5" src="images/ice-cream 1.svg" alt="">
+                            <div class="space-y-4">
+                                <h4 class="font-lato text-2xl font-extrabold text-[#121212]">Sustainable Practice
+                                </h4>
+                                <hr>
+                                <p class="font-lato text-[#12121299] text-base font-medium">Professional employees
+                                    are there for you to pick the most amazing and fresh
+                                    fruits.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 flex-row-reverse text-end justify-center items-center mb-9">
+                            <img class="bg-gray-300 rounded-full p-5" src="images/like 1.svg" alt="">
+                            <div class="space-y-4">
+                                <h4 class="font-lato text-2xl font-extrabold text-[#121212]">The Benefits Only</h4>
+                                <hr>
+                                <p class="font-lato text-[#12121299] text-base font-medium">Professional employees
+                                    are there for you to pick the most amazing and fresh
+                                    fruits.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </section>
         </article>
     </main>
-    <footer></footer>
+    <footer class="footer footer-center p-10 bg-[#121212] text-primary-content">
+        <div class="flex items-center justify-center gap-4">
+            <img src="images/logo.png" alt="">
+            <h2 class="font-lato text-[40px] text-[#FFF] font-bold">Fruit Burst</h2>
+        </div>
+        <div class="flex flex-wrap justify-center items-center gap-6 lg:gap-14">
+            <a class="font-lato text-lg font-semibold text-[#FFF]" href="">Home</a>
+            <a class="font-lato text-lg font-semibold text-[#FFF]" href="">About Us</a>
+            <a class="font-lato text-lg font-semibold text-[#FFF]" href="">Shop</a>
+            <a class="font-lato text-lg font-semibold text-[#FFF]" href="">All Fruits</a>
+            <a class="font-lato text-lg font-semibold text-[#FFF]" href="">Support</a>
+            <a class="font-lato text-lg font-semibold text-[#FFF]" href="">My Account</a>
+        </div>
+        <div class="flex gap-5 lg:gap-10 justify-center items-center">
+            <i class="fa-brands fa-twitter text-2xl lg:text-5xl"></i>
+            <i class="fa-brands fa-facebook-f text-2xl lg:text-5xl"></i>
+            <i class="fa-brands fa-youtube text-2xl lg:text-5xl"></i>
+            <i class="fa-brands fa-linkedin text-2xl lg:text-5xl"></i>
+            <i class="fa-brands fa-instagram text-2xl lg:text-5xl"></i>
+            <i class="fa-brands fa-apple text-2xl lg:text-5xl"></i>
+        </div>
+    </footer>
 </body>
 
 </html>
